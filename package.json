@@ -13,12 +13,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/debug": "^0.0.31",
+    "@types/lodash": "^4.14.118",
     "nodemon": "^1.18.3",
     "tslint": "^5.11.0",
     "typescript": "^3.0.1"
   },
   "dependencies": {
     "@types/express": "^4.16.0",
-    "express": "^4.16.3"
+    "debug": "^4.1.0",
+    "express": "^4.16.3",
+    "lodash": "^4.17.11"
   }
 }

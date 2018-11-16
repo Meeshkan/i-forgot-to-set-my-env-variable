@@ -17,4 +17,4 @@ app.get("/", (req: express.Request, res: express.Response) => {
 });
 
 const port = process.env.PORT || 3000;
-app.listen(3000, () => debug("i:forgot")(`listening on port ${port}!`));
+app.listen(port, () => debug("i:forgot")(`listening on port ${port}!`));

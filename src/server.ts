@@ -4,7 +4,7 @@ import _ from "lodash";
 
 const app = express();
 
-app.get("/", (req: express.Request, res: express.Response) => {
+const fail = (req: express.Request, res: express.Response) => {
     const feedback = [
         "Thanks for the free credentials. We just used them to hack your production environment.",
         "Your unconditional optimism about the future is inspiring.",
@@ -14,7 +14,10 @@ app.get("/", (req: express.Request, res: express.Response) => {
         "Testing is overrated.",
     ];
     res.send(_.sample(feedback));
-});
+};
+
+app.get("/", (req: express.Request, res: express.Response) => fail(req, res));
+app.post("/", (req: express.Request, res: express.Response) => fail(req, res));
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => debug("i:forgot")(`listening on port ${port}!`));

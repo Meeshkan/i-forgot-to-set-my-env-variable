@@ -7,7 +7,7 @@
     "start": "node dist/server.js",
     "watch-node": "nodemon dist/server.js",
     "watch-ts": "tsc -w",
-    "postinstall": "yarn run build"
+    "postinstall": "npm run build"
   },
   "author": "",
   "license": "ISC",
